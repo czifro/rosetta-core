@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Rosetta.Core", "Rosetta.Core\Rosetta.Core.fsproj", "{6D573DF2-CF00-4D10-AFA4-30E959A0D71D}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Rosetta.Core", "src\Rosetta.Core\Rosetta.Core.fsproj", "{6D573DF2-CF00-4D10-AFA4-30E959A0D71D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{55C61BBA-872E-441D-9EA1-9B176F904B7A}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Rosetta.Core.Test", "test\Rosetta.Core.Test\Rosetta.Core.Test.fsproj", "{85919F57-FC93-4217-997B-48748CDA61F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +34,20 @@ Global
 		{6D573DF2-CF00-4D10-AFA4-30E959A0D71D}.Release|x64.Build.0 = Release|x64
 		{6D573DF2-CF00-4D10-AFA4-30E959A0D71D}.Release|x86.ActiveCfg = Release|x86
 		{6D573DF2-CF00-4D10-AFA4-30E959A0D71D}.Release|x86.Build.0 = Release|x86
+		{85919F57-FC93-4217-997B-48748CDA61F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85919F57-FC93-4217-997B-48748CDA61F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85919F57-FC93-4217-997B-48748CDA61F9}.Debug|x64.ActiveCfg = Debug|x64
+		{85919F57-FC93-4217-997B-48748CDA61F9}.Debug|x64.Build.0 = Debug|x64
+		{85919F57-FC93-4217-997B-48748CDA61F9}.Debug|x86.ActiveCfg = Debug|x86
+		{85919F57-FC93-4217-997B-48748CDA61F9}.Debug|x86.Build.0 = Debug|x86
+		{85919F57-FC93-4217-997B-48748CDA61F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85919F57-FC93-4217-997B-48748CDA61F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85919F57-FC93-4217-997B-48748CDA61F9}.Release|x64.ActiveCfg = Release|x64
+		{85919F57-FC93-4217-997B-48748CDA61F9}.Release|x64.Build.0 = Release|x64
+		{85919F57-FC93-4217-997B-48748CDA61F9}.Release|x86.ActiveCfg = Release|x86
+		{85919F57-FC93-4217-997B-48748CDA61F9}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{85919F57-FC93-4217-997B-48748CDA61F9} = {55C61BBA-872E-441D-9EA1-9B176F904B7A}
 	EndGlobalSection
 EndGlobal
