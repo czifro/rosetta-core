@@ -36,3 +36,23 @@ namespace Rosetta.Core.Test
         }
       let actual = Codegen.result code
       Assert.Equal(expected,actual)
+
+    [<Fact>]
+    let ``Should generate simple cs method with body using default tab size`` () =
+      let tabSize = Codegen.defaultIndentSize
+      let tabs = (' ', [ for i in 0..tabSize -> "" ]) |> String.Join
+      let bodyStr = "Console.WriteLine(\"Hello World!\");"
+      let expected = sprintf "public void Test()\n{\n%s%s\n}" tabs bodyStr
+      let body =
+        codegen {
+          appendLine "Console.WriteLine(\"Hello World!\");"
+        }
+      let code =
+        codegen {
+          appendLine "public void Test()"
+          appendLine "{"
+          useIndent body
+          append "}"
+        }
+      let actual = Codegen.result code
+      Assert.Equal(expected,actual)
