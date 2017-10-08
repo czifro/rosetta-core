@@ -1,0 +1,9 @@
+language: csharp
+solution: Rosetta.sln
+dotnet: 2.0.0
+
+script:
+  - dotnet --info
+  - dotnet restore
+  - cd src/Rosetta.Core.Test
+  - dotnet test
