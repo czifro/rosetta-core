@@ -56,3 +56,38 @@ namespace Rosetta.Core.Test
         }
       let actual = Codegen.result code
       Assert.Equal(expected,actual)
+
+    [<Fact>]
+    let ``Should generate nested multi-line fs function`` () =
+      let expected =
+        [
+          "public class Test"
+          "{"
+          "    public void Test()"
+          "    {"
+          "        Console.WriteLine(\"Hello World!\");"
+          "    }"
+          "}"
+        ]
+        |> String.concat "\n"
+      let body =
+        codegen {
+          appendLine "Console.WriteLine(\"Hello World!\");"
+        }
+      let method =
+        codegen {
+          appendLine "public void Test()"
+          appendLine "{"
+          useIndent body
+          appendLine "}"
+        }
+      let code =
+        codegen {
+          appendLine "public class Test"
+          appendLine "{"
+          useIndent method
+          append "}"
+        }
+      let actual = Codegen.result code
+      printfn "%s" actual
+      Assert.Equal(expected,actual)
