@@ -1,5 +1,5 @@
 language: csharp
-solution: Rosetta.sln
+solution: Rosetta.Core.sln
 dotnet: 2.0.0
 
 script:
